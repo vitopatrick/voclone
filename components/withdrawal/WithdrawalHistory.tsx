@@ -110,7 +110,7 @@ const DepositDetailsModal = ({ id, show, close }: any | unknown) => {
         }}
         className={
           show
-            ? "fixed top-0 left-0 bottom-0 right-0 w-full h-[700px] md:h-full overflow-scroll bg-card/30 backdrop-blur-sm"
+            ? "fixed top-0 left-0 bottom-0 right-0 w-full h-full md:h-full overflow-scroll bg-card/30 backdrop-blur-sm"
             : "hidden"
         }
       >
@@ -122,6 +122,7 @@ const DepositDetailsModal = ({ id, show, close }: any | unknown) => {
             <Md.MdClose
               className="cursor-pointer"
               onClick={() => close(false)}
+              color="#fff"
             />
           </div>
           {/* details */}
