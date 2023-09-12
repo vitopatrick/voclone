@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* import the custom fonts */
+
+@font-face {
+  font-family: 'satoshi-black';
+  src: url('/fonts/Satoshi-Black.ttf');
+}
+@font-face {
+  font-family: 'satoshi-bold';
+  src: url('/fonts/Satoshi-Bold.ttf');
+}
+@font-face {
+  font-family: 'satoshi-light';
+  src: url('/fonts/Satoshi-Light.ttf');
+}
+@font-face {
+  font-family: 'satoshi-medium';
+  src: url('/fonts/Satoshi-Medium.ttf');
+}
+@font-face {
+  font-family: 'satoshi-regular';
+  src: url('/fonts/Satoshi-Regular.ttf');
+}
+@font-face {
+  font-family: 'satoshi-variable';
+  src: url('/fonts/Satoshi-Variable.ttf');
+}
+
+@layer components {
+  .toast {
+    @apply font-regular text-base;
+  }
+}
+
+body {
+  @apply font-variable
+}
