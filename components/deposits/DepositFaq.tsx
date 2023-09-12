@@ -3,17 +3,17 @@ import * as Md from "react-icons/md";
 import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
-  {
-    id: 1,
-    question: "How many confirmations does Coin exchange need?",
-    answer:
-      "he deposit transaction will be automatic, and the Bitcoin transfer will need to be confirmed by the entire Bitcoin network, and your Bitcoin will be automatically deposited to your account after 6 confirmation",
-  },
-  {
-    id: 2,
-    question: "What is the minimum deposit",
-    answer: "The deposit amount must be between $5 – $5,000 per trade.",
-  },
+  // {
+  //   id: 1,
+  //   question: "How many confirmations does Coin exchange need?",
+  //   answer:
+  //     "he deposit transaction will be automatic, and the Bitcoin transfer will need to be confirmed by the entire Bitcoin network, and your Bitcoin will be automatically deposited to your account after 6 confirmation",
+  // },
+  // {
+  //   id: 2,
+  //   question: "What is the minimum deposit",
+  //   answer: "The deposit amount must be between $5 – $5,000 per trade.",
+  // },
   {
     id: 3,
     question: "How long does it take to deposit",
