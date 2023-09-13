@@ -116,7 +116,7 @@ const DepositDetailsModal = ({ id, show, close }: any | unknown) => {
       >
         <div className="md:w-[50%] w-[80%] mx-auto md:mt-14 bg-bg p-4">
           <div className="flex justify-between items-center">
-            <h4 className="font-bold text-base text-black underline">
+            <h4 className="font-bold text-base text-white underline">
               Deposit Details
             </h4>
             <Md.MdClose
@@ -129,7 +129,7 @@ const DepositDetailsModal = ({ id, show, close }: any | unknown) => {
           {loading ? (
             <Loading />
           ) : (
-            <div className="my-8 md:space-y-4 text-xs md:text-base">
+            <div className="my-8 md:space-y-4 text-white text-xs md:text-base">
               <div>
                 <h4 className="text-neutral-400 font-semibold">Time</h4>
                 <h4 className="font-semibold">{transaction?.date}</h4>
