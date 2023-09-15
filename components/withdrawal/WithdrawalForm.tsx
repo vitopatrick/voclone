@@ -266,7 +266,7 @@ const CoinModal = ({ show, close, coin }: any) => {
                       <img src={address.logo} alt="" className="rounded-full" />
                     </div>
                     <div className="space-y-2">
-                      <h4 className="capitalize font-semibold">
+                      <h4 className="capitalize text-white font-semibold">
                         {address.name}
                       </h4>
                       <p className="uppercase font-semibold text-neutral-400 break-words">
