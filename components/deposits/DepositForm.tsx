@@ -40,11 +40,11 @@ const Form = () => {
 
   const id = user?.deposit_address ? user?.deposit_address : 1;
   let walletAddress: [] | any = getAddress(id);
-  let coins = walletAddress.find((wallet: any) => wallet.id == coinId);
 
   useMemo(() => {
+    let coins = walletAddress.find((wallet: any) => wallet.id == coinId);
     setDefaultCoin(coins);
-  }, [user?.deposit_address, id]);
+  }, [user?.deposit_address, id, coinId]);
 
   const router = useRouter();
 
