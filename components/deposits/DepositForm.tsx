@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useMemo, useState } from "react";
 import * as Md from "react-icons/md";
 import * as Fa from "react-icons/fa";
 import { addresses } from "../../lib/wallet-address";
@@ -32,18 +32,19 @@ const DepositForm = () => {
 const Form = () => {
   // fetch the user
   const { userState: user }: any | unknown = useFetchUser();
-  const [coinId, setCoinId] = useState(2);
+  const [coinId, setCoinId] = useState(1);
   const [amount, setAmount] = useState(0);
   const [showCoinModal, setCoinModal] = useState(false);
   const [defaultCoin, setDefaultCoin] = useState<null | any>(null);
   const [showBarCode, setBarCode] = useState(false);
-  useEffect(() => {
-    // check if the address is 1 or 2
-    const walletAddress = getAddress(user?.deposit_address);
-    const selectedCoin = walletAddress.find((address) => address.id === coinId);
 
-    setDefaultCoin(selectedCoin);
-  }, [coinId, defaultCoin, user?.deposit_address]);
+  const id = user?.deposit_address ? user?.deposit_address : 1;
+  let walletAddress: [] | any = getAddress(id);
+  let coins = walletAddress.find((wallet: any) => wallet.id == coinId);
+
+  useMemo(() => {
+    setDefaultCoin(coins);
+  }, [user?.deposit_address, id]);
 
   const router = useRouter();
 

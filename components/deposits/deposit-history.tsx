@@ -89,6 +89,7 @@ const DepositTable = ({ transactions, loading }: any) => {
 const DepositDetailsModal = ({ id, show, close }: any | unknown) => {
   const { transaction, loading } = useTransaction(id, "deposits");
 
+
   return (
     <AnimatePresence>
       <motion.section
@@ -183,7 +184,7 @@ const DepositDetailsModal = ({ id, show, close }: any | unknown) => {
                   Fee
                 </h4>
                 <p className="font-semibold">
-                  {formatCurrency(transaction?.fee ? transaction?.fee : 0)}
+                  {transaction?.fee ? formatCurrency(transaction?.fee) : 0}
                 </p>
               </div>
               <div>

@@ -28,6 +28,7 @@ export const useTransaction = (id: String | any, path: string | any) => {
             network: doc.data().network,
             hash: doc.data().hash,
             address: doc.data().address,
+            fee: doc.data().fee,
           };
 
           setTransaction(data);
