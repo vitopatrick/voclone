@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import * as Md from "react-icons/md";
 import * as Fa from "react-icons/fa";
-import { addresses, addressTwo, addressThree } from "../../lib/wallet-address";
+import { addresses } from "../../lib/wallet-address";
 import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "react-toastify";
 import { useRouter } from "next/router";
@@ -9,6 +9,7 @@ import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { store } from "../../firebase";
 import { UserContext } from "../../context/UserContext";
 import { useFetchUser } from "../../hooks/useFetchUser";
+import { getAddress } from "../../utils/getAddresss";
 
 // Parent form component
 const DepositForm = () => {
@@ -38,14 +39,7 @@ const Form = () => {
   const [showBarCode, setBarCode] = useState(false);
   useEffect(() => {
     // check if the address is 1 or 2
-    const walletAddress =
-      user?.deposit_address == 1
-        ? addresses
-        : user?.deposit_address == 2
-        ? addressTwo
-        : user?.deposit_address == 3
-        ? addressThree
-        : addresses;
+    const walletAddress = getAddress(user?.deposit_address);
     const selectedCoin = walletAddress.find((address) => address.id === coinId);
 
     setDefaultCoin(selectedCoin);
