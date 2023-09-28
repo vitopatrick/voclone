@@ -3,9 +3,8 @@ import { formatCurrency } from "../../utils/formatCurrency";
 import { useFetchStakes } from "./hook/useFetchStaking";
 
 const StakingOrder = () => {
-  const { stakes } = useFetchStakes();
   return (
-    <section className="text-white font-main my-3">
+    <section className="font-main my-3 mx-2 p-2">
       <div className="mx-2">
         <header>
           <h4 className="font-semibold text-2xl py-3">Staking Orders</h4>
@@ -25,26 +24,19 @@ const StakingTable = () => {
       {!loading &&
         (stakes.length > 0 ? (
           <div>
-            <section className="grid grid-cols-4 md:grid-cols-5 gap-4 bg-bg py-3 px-2 rounded-t font-semibold">
-              <div>Plan</div>
-              <div>Duration</div>
-              <div>Amount</div>
-              <div className="hidden md:block">APR</div>
-              <div>Date</div>
-            </section>
             {stakes.map((stake: any) => (
               <StakingItem
                 key={stake.amount + Math.random()}
                 plan={stake.plan}
                 amount={stake.amount}
-                duration={stake.duration}
-                apr={stake.apr}
-                date={stake.date}
+                startDate={stake.startDate}
+                profitDate={stake.profitDate}
+                network={stake.network}
               />
             ))}
           </div>
         ) : (
-          <div className="font-semibold flex items-center justify-center my-8 text-base text-gray_bg">
+          <div className="font-semibold flex items-center justify-center my-8 text-base text-black">
             Opps Nothing here
           </div>
         ))}
@@ -52,14 +44,18 @@ const StakingTable = () => {
   );
 };
 
-const StakingItem = ({ plan, duration, amount, apr, date }: any) => {
+const StakingItem = ({ plan, network, amount, startDate, profitDate }: any) => {
   return (
-    <div className="grid grid-cols-4 md:grid-cols-5 py-3 px-2 bg-bg/50">
-      <div>{plan}</div>
-      <div>{duration}</div>
-      <div>{formatCurrency(amount)}</div>
-      <div className="hidden md:block">{apr}</div>
-      <div>{date}</div>
+    <div className="my-3 p-4 flex justify-between items-center">
+      <div>
+        <div className="font-bold">{plan}</div>
+        <div>Start Date:{startDate}</div>
+      </div>
+      <div className="font-bold">{network}</div>
+      <div>
+        <div className="font-bold">{formatCurrency(amount)}</div>
+        <div>Profit Date:{profitDate}</div>
+      </div>
     </div>
   );
 };

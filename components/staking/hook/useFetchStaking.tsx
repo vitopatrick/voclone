@@ -11,6 +11,7 @@ export const useFetchStakes = () => {
   // user context
   const { user }: any = useContext(UserContext);
 
+
   useMemo(() => {
     const controller = new AbortController();
     setLoading(true);
@@ -22,7 +23,7 @@ export const useFetchStakes = () => {
         `/${user.email}`,
         "/staking"
       );
-      const q = query(collectionRef, orderBy("date", "asc"));
+      const q = query(collectionRef, orderBy("amount", "asc"));
 
       const stakesArray: any = [];
 
@@ -32,11 +33,11 @@ export const useFetchStakes = () => {
           docs.forEach((doc) => {
             const data = doc.data();
             stakesArray.push({
-              duration: data.duration,
               plan: data.plan,
               amount: data.amount,
-              date: new Date(data.date.toDate()).toDateString(),
-              apr: data.apr,
+              startDate: data.start_date,
+              profitDate: data.profitDate,
+              network: data.network,
             });
             setStakes(stakesArray);
           });

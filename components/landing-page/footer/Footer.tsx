@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="bg-bg">
       <div className="w-[90%] mx-auto py-4">
         <div className="font-bold text-teal-500/50 text-2xl uppercase underline tracking-widest">
           VSAexchange

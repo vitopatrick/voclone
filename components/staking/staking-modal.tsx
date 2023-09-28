@@ -1,8 +1,5 @@
-import { Dispatch, SetStateAction, useContext, useMemo, useState } from "react";
-import { FcBriefcase } from "react-icons/fc";
-import { FiDollarSign } from "react-icons/fi";
+import { Dispatch, SetStateAction, useContext, useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import { stakingOptions } from "../../lib/staking-options";
 import {
   doc,
   updateDoc,
@@ -17,34 +14,40 @@ import { useFetchUser } from "../../hooks/useFetchUser";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { toast } from "react-toastify";
 import TradingModal from "../../shared/modal/trading-modal";
+import Link from "next/link";
 
 interface ModalProps {
   visible: Boolean;
   setVisible: Dispatch<SetStateAction<boolean>>;
+  data: any;
 }
 
-const StakingModal = ({ visible, setVisible }: ModalProps) => {
+const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
   const [amount, setAmount] = useState<string | number | any>();
-  const [plan, setPlan] = useState<string | number>("USDT");
-  const [selectedPlan, setSelectedPlan] = useState<any>();
   const [show, setShow] = useState(false);
 
-  const { user }: any = useContext(UserContext);
   const { userState: state }: any = useFetchUser();
 
-  const router = useRouter();
+  console.log();
 
-  const selectPlan = () => {
-    const findPlan = stakingOptions.find(
-      (stakingOption) => stakingOption.plan == plan
-    );
-
-    setSelectedPlan(findPlan);
+  // calculate profit
+  const calculateProfit = () => {
+    let profit;
+    switch (data?.roi) {
+      case "60%":
+        return (profit = parseInt(amount) + parseInt(amount) * 0.6);
+      case "100%":
+        return (profit = parseInt(amount) + parseInt(amount) * 1);
+      default:
+        return (profit = parseInt(amount) + parseInt(amount) * 1.5);
+    }
   };
 
-  useMemo(() => {
-    selectPlan();
-  }, [plan]);
+  let date = new Date();
+  let accrualDate = date.setDate(date.getDay() + parseInt(data?.duration));
+  let profit = calculateProfit();
+
+  const router = useRouter();
 
   const openModal = (e: any) => {
     e.preventDefault();
@@ -59,59 +62,42 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
     setShow(true);
   };
 
-  const updateStakingPlan = async (e: any) => {
-    if (state.MainAccount < amount) {
-      return toast("Insufficient Balance,Please Deposit", {
-        type: "error",
-        position: "bottom-center",
+  const updateStakingPlan = async () => {
+    // check if the amount is less than the minimum amount
+    if (amount < data?.min) {
+      return toast("Amount is less than minimum", {
+        position: "top-center",
+        theme: "colored",
         bodyClassName: "toast",
+        type: "error",
       });
     }
 
-    try {
-      if (parseInt(amount) < selectedPlan.min) {
-        toast(
-          `Amount Should not be less than ${formatCurrency(selectedPlan.min)}`,
-          {
-            type: "error",
-            position: "bottom-center",
-            bodyClassName: "toast",
-          }
-        );
-
-        return;
-      }
-
-      const docRef = doc(store, "users", `${user.email}`);
-      const collectionRef = collection(
-        store,
-        "users",
-        `${user.email}`,
-        "/staking"
-      );
-
-      await addDoc(collectionRef, {
-        amount,
-        plan,
-        apr: selectedPlan.apr,
-        duration: selectedPlan.duration,
-        date: serverTimestamp(),
-      });
-
-      await updateDoc(docRef, {
-        StakingAccount: amount,
-        plan,
-        MainAccount: state.MainAccount - amount,
-      });
-      setVisible(false);
-      setShow(false);
-      router.reload();
-    } catch (error: unknown | any) {
-      toast(e.code, {
-        type: "error",
-        position: "bottom-center",
+    // check if the amount is greater than that in Main account
+    if (amount > state?.MainAccount) {
+      return toast("Please Fund Account", {
+        position: "top-center",
+        theme: "colored",
         bodyClassName: "toast",
+        type: "error",
       });
+    }
+    try {
+      // create collection ref
+      const docRef = collection(store, "/users", `${state.Email}`, "staking");
+
+      // create the new collection
+      await addDoc(docRef, {
+        plan: data?.plan,
+        network: data?.network,
+        amount,
+        start_date: new Date().toLocaleDateString(),
+        profitDate: new Date(accrualDate).toLocaleDateString(),
+      });
+      setShow(false);
+      setVisible(false);
+    } catch (error) {
+      console.log(error);
     }
   };
 
@@ -121,68 +107,161 @@ const StakingModal = ({ visible, setVisible }: ModalProps) => {
       <div
         className={
           visible
-            ? "absolute top-0 left-0 backdrop-blur-sm bg-black/25 w-full h-full"
+            ? "fixed top-0 left-0 backdrop-blur-sm bg-black/25 w-full h-full"
             : "hidden"
         }
       >
         {/* main div that will be center */}
-        <div className="w-[80%] md:w-[40%] mx-auto relative my-12 bg-bg font-main text-white rounded-md shadow-md p-4">
-          <div className="absolute top-0 right-0 p-2">
+        <div className="w-[90%] md:w-[60%] mx-auto relative my-3 bg-neutral-100 font-main rounded-lg shadow p-4 md:p-8">
+          <div className="absolute top-0 right-0 p-4">
             <FaTimes onClick={() => setVisible(false)} />
           </div>
           {/* parent flex div */}
-          <div className="flex flex-col justify-center items-start">
-            <div className="mb-6 self-center">
-              <FcBriefcase size="8rem" />
-            </div>
-            <div className="w-full">
-              <label
-                htmlFor="amount"
-                className="font-sec my-2 text-neutral-400"
-              >
-                Enter Amount
-              </label>
-              <div className="flex items-center bg-neutral-300 py-3 px-1 rounded mt-2 gap-2">
-                <FiDollarSign className="stroke-bg" />
-                <input
-                  type="text"
-                  name="amount"
-                  id="amount"
-                  value={amount}
-                  onChange={(e) => setAmount(e.target.value)}
-                  className="w-full bg-transparent text-bg outline-none px-2"
-                />
+          <div className="flex flex-col md:flex-row gap-8">
+            {/* Form */}
+            <div className="flex-1 space-y-5">
+              {/* header */}
+              <div className="flex items-center gap-4">
+                <div className="w-[40px]">
+                  <img src={data?.image} alt="" />
+                </div>
+                <h4 className="font-bold text-xl">Staking</h4>
+              </div>
+              {/* APR */}
+              <div>
+                <div className="flex items-stretch justify-between">
+                  <h4 className="font-semibold text-neutral-400">APR</h4>{" "}
+                  <p className="font-semibold">{data?.roi}</p>
+                </div>
+              </div>
+              {/* Term */}
+              <div>
+                <div className="flex items-stretch justify-between">
+                  <h4 className="font-semibold text-neutral-400">Term</h4>{" "}
+                  <p className="font-semibold">fixed</p>
+                </div>
+              </div>
+              <hr />
+              <div>
+                <h4 className="font-bold text-xl">Amount</h4>
+                {/* form field */}
+                <div className="my-3">
+                  <input
+                    type="number"
+                    name="amount"
+                    value={amount}
+                    onChange={(e) => setAmount(e.target.value)}
+                    className="w-full border border-neutral-400 outline-none p-3 rounded bg-transparent"
+                  />
+                </div>
+                {/* Account */}
+                <div>
+                  <div className="flex items-stretch justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Minimum Amount
+                    </h4>{" "}
+                    <p className="font-semibold">{formatCurrency(data?.min)}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-stretch justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Funding Account
+                    </h4>{" "}
+                    <p className="font-semibold">
+                      {formatCurrency(state?.MainAccount)}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-            <div className="w-full my-4">
-              <label
-                htmlFor="staking option"
-                className="font-sec my-2 text-neutral-400"
+            {/*  */}
+
+            {/* Preview */}
+            <div className=" p-3 flex-1">
+              {/* Header */}
+              <h4 className="font-bold text-black text-xl">Preview</h4>
+              {/* Dates */}
+              <section className="space-y-2 my-4">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Subscription Date
+                    </h4>{" "}
+                    <p className="font-semibold">{new Date().toDateString()}</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Accrual Date
+                    </h4>{" "}
+                    <p className="font-semibold">
+                      {new Date(accrualDate).toDateString()}
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Profit Distribution Date
+                    </h4>{" "}
+                    <p className="font-semibold">
+                      {new Date(accrualDate).toDateString()}
+                    </p>
+                  </div>
+                </div>
+              </section>
+              {/* Dates */}
+              <section className="space-y-2 my-4">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Redemption Period
+                    </h4>{" "}
+                    <p className="font-semibold">{data?.duration}days</p>
+                  </div>
+                </div>
+                <div>
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-semibold text-neutral-400">
+                      Profit Received
+                    </h4>{" "}
+                    <p className="font-semibold">Daily</p>
+                  </div>
+                </div>
+              </section>
+              {/* Returns */}
+              <section className="space-y-6">
+                <h4 className="font-semibold text-xl">Estimated Returns</h4>
+                <div className="flex items-center justify-between">
+                  <h4 className="font-semibold text-neutral-400">Earnings</h4>{" "}
+                  <p className="font-semibold">
+                    {!amount ? formatCurrency(0) : formatCurrency(profit)}
+                  </p>
+                </div>
+              </section>
+              {/* submit button */}
+              <button
+                onClick={openModal}
+                className="bg-teal-600 p-3 w-full rounded-full my-3 text-white capitalize font-bold"
               >
-                Staking Option
-              </label>
-              <div className="flex items-center bg-neutral-300 py-3 px-1 rounded mt-2 gap-2">
-                <select
-                  name="option"
-                  id="option"
-                  value={plan}
-                  onChange={(e) => setPlan(e.target.value)}
-                  className="w-full bg-transparent text-bg focus:outline-none px-2"
-                >
-                  {stakingOptions.map((stakingOption) => (
-                    <option key={stakingOption.id} value={stakingOption.plan}>
-                      {stakingOption.plan}
-                    </option>
-                  ))}
-                </select>
+                subscribe
+              </button>
+              {/* Terms and agreement */}
+              <div className="flex items-center gap-2">
+                <p className="text-sm capitalize">
+                  I have read and agree to the{" "}
+                  <Link
+                    href="/mining-agreement"
+                    className="text-teal-600 font-semibold"
+                  >
+                    {" "}
+                    cryptocurrency mining agreement
+                  </Link>
+                </p>
               </div>
             </div>
-            <button
-              onClick={openModal}
-              className="mt-4 inline-block w-full font-sec bg-card text-white py-2 rounded"
-            >
-              Stake Now
-            </button>
           </div>
         </div>
       </div>
