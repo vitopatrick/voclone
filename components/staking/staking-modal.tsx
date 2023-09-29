@@ -1,4 +1,4 @@
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useState, useContext } from "react";
 import { FaTimes } from "react-icons/fa";
 import { collection, addDoc } from "firebase/firestore";
 import { store } from "../../firebase";
@@ -8,6 +8,7 @@ import { formatCurrency } from "../../utils/formatCurrency";
 import { toast } from "react-toastify";
 import TradingModal from "../../shared/modal/trading-modal";
 import Link from "next/link";
+import { UserContext } from "../../context/UserContext";
 
 interface ModalProps {
   visible: Boolean;
@@ -20,6 +21,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
   const [show, setShow] = useState(false);
 
   const { userState: state }: any = useFetchUser();
+  const { user }: any = useContext(UserContext);
 
   // calculate profit
   const calculateProfit = () => {
@@ -78,7 +80,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
       const collectionRef = collection(
         store,
         "/users",
-        `${state.Email}`,
+        `${user.email}`,
         "staking"
       );
       const docRef = collection(store, "staking");
@@ -98,7 +100,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         amount,
         start_date: new Date().toLocaleDateString(),
         profitDate: new Date(accrualDate).toLocaleDateString(),
-        email: state.Email,
+        email: user.email,
       });
 
       router.reload();
