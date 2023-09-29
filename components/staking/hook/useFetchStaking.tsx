@@ -23,7 +23,7 @@ export const useFetchStakes = () => {
         `/${user.email}`,
         "/staking"
       );
-      const q = query(collectionRef, orderBy("amount", "asc"));
+      const q = query(collectionRef, orderBy("start_date", "asc"));
 
       const stakesArray: any = [];
 

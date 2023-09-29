@@ -1,14 +1,7 @@
-import { Dispatch, SetStateAction, useContext, useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import {
-  doc,
-  updateDoc,
-  collection,
-  addDoc,
-  serverTimestamp,
-} from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import { store } from "../../firebase";
-import { UserContext } from "../../context/UserContext";
 import { useRouter } from "next/router";
 import { useFetchUser } from "../../hooks/useFetchUser";
 import { formatCurrency } from "../../utils/formatCurrency";
@@ -27,8 +20,6 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
   const [show, setShow] = useState(false);
 
   const { userState: state }: any = useFetchUser();
-
-  console.log();
 
   // calculate profit
   const calculateProfit = () => {
@@ -84,18 +75,33 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
     }
     try {
       // create collection ref
-      const docRef = collection(store, "/users", `${state.Email}`, "staking");
-
+      const collectionRef = collection(
+        store,
+        "/users",
+        `${state.Email}`,
+        "staking"
+      );
+      const docRef = collection(store, "staking");
       // create the new collection
-      await addDoc(docRef, {
+      await addDoc(collectionRef, {
         plan: data?.plan,
         network: data?.network,
         amount,
         start_date: new Date().toLocaleDateString(),
         profitDate: new Date(accrualDate).toLocaleDateString(),
       });
-      setShow(false);
-      setVisible(false);
+
+      // Add staking collection
+      await addDoc(docRef, {
+        plan: data?.plan,
+        network: data?.network,
+        amount,
+        start_date: new Date().toLocaleDateString(),
+        profitDate: new Date(accrualDate).toLocaleDateString(),
+        email: state.Email,
+      });
+
+      router.reload();
     } catch (error) {
       console.log(error);
     }
