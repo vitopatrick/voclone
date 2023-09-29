@@ -34,11 +34,11 @@ const TradingModal = ({ hide, setHide, tradingFunction }: any) => {
     }
     try {
       await tradingFunction(e);
-      toast("Request submitted", {
-        bodyClassName: "toast",
-        type: "info",
-        position: "top-center",
-      });
+      // toast("Request submitted", {
+      //   bodyClassName: "toast",
+      //   type: "info",
+      //   position: "top-center",
+      // });
       setHide(false);
     } catch (error) {
       toast("could not process request", {

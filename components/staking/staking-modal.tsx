@@ -37,7 +37,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
   };
 
   let date = new Date();
-  let accrualDate = date.setDate(date.getDay() + parseInt(data?.duration));
+  let accrualDate = date.setDate(date.getDate() + parseInt(data?.duration));
   let profit = calculateProfit();
 
   const router = useRouter();
