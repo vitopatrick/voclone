@@ -1,6 +1,6 @@
 import { Dispatch, SetStateAction, useState, useContext } from "react";
 import { FaTimes } from "react-icons/fa";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, updateDoc, doc, increment } from "firebase/firestore";
 import { store } from "../../firebase";
 import { useRouter } from "next/router";
 import { useFetchUser } from "../../hooks/useFetchUser";
@@ -37,6 +37,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
   };
 
   let date = new Date();
+  // let accrualDate = date.setDate(date.getDate() + 10);
   let accrualDate = date.setDate(date.getDate() + parseInt(data?.duration));
   let profit = calculateProfit();
 
@@ -84,13 +85,14 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         "staking"
       );
       const docRef = collection(store, "staking");
+      const userRef = doc(store, "/users", `${user.email}`);
       // create the new collection
       await addDoc(collectionRef, {
         plan: data?.plan,
         network: data?.network,
         amount,
-        start_date: new Date().toLocaleDateString(),
-        profitDate: new Date(accrualDate).toLocaleDateString(),
+        start_date: new Date().toDateString(),
+        profitDate: new Date(accrualDate).toDateString(),
       });
 
       // Add staking collection
@@ -98,10 +100,16 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         plan: data?.plan,
         network: data?.network,
         amount,
-        start_date: new Date().toLocaleDateString(),
-        profitDate: new Date(accrualDate).toLocaleDateString(),
+        start_date: new Date().toDateString(),
+        profitDate: new Date(accrualDate).toDateString(),
         email: user.email,
       });
+
+      // update the user account 
+      await updateDoc(userRef,{
+        MainAccount:increment(-amount),
+        StakingAccount:increment(+amount)
+      })
 
       router.reload();
     } catch (error) {

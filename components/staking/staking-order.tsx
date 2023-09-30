@@ -18,6 +18,8 @@ const StakingOrder = () => {
 const StakingTable = () => {
   const { stakes, loading } = useFetchStakes();
 
+  console.log(stakes)
+
   return (
     <>
       {loading && <Loading />}
