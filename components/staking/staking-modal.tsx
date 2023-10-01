@@ -135,6 +135,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
           profit_date:new Date(accrualDate).toDateString(),
           duration:data?.duration,
           returns:formatCurrency(profit),
+          apr:data?.roi
         }),
       });
 

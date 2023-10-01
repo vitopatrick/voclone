@@ -188,7 +188,7 @@ export default async function handler(req, res) {
           <tr>
             <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
               
-        <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 10px; font-weight: 400;"><h4 data-removefontsize="true" data-originalcomputedfontsize="11">APR:                                 150%</h4>
+        <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 10px; font-weight: 400;"><h4 data-removefontsize="true" data-originalcomputedfontsize="11">APR: ${req.body.apr}</h4>
       <p>Term:                                 Fixed<br /><br /></p>
       <p><strong>Subscription date:</strong> ${req.body.start_date}</p>
       <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Accrual Date: <span>${req.body.accrual_date}</span><br /><span></span></h4>
