@@ -138,7 +138,8 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
           duration:data?.duration,
           returns:formatCurrency(profit),
           apr:data?.roi,
-          plan:data?.plan
+          plan:data?.plan,
+          amount:formatCurrency(amount)
         }),
       });
 
