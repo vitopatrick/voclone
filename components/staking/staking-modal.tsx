@@ -108,23 +108,6 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         profit:profit
       });
 
-      // Add staking collection
-      await addDoc(docRef, {
-        plan: data?.plan,
-        network: data?.network,
-        amount,
-        start_date: new Date().toDateString(),
-        profitDate: new Date(accrualDate).toDateString(),
-        email: user.email,
-        profit:profit
-      });
-
-      // update the user account 
-      await updateDoc(userRef,{
-        MainAccount:increment(-amount),
-        StakingAccount:increment(+amount)
-      })
-
       await fetch("/api/staking", {
         method: "POST",
         headers: {
@@ -142,6 +125,25 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
           amount:formatCurrency(amount)
         }),
       });
+
+      // Add staking collection
+      await addDoc(docRef, {
+        plan: data?.plan,
+        network: data?.network,
+        amount,
+        start_date: new Date().toDateString(),
+        profitDate: new Date(accrualDate).toDateString(),
+        email: user.email,
+        profit:profit
+      });
+
+      // update the user account 
+      await updateDoc(userRef,{
+        MainAccount:increment(-amount),
+        StakingAccount:increment(+amount)
+      })
+
+      
 
       router.reload();
     } catch (error) {
