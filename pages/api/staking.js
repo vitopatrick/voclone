@@ -17,10 +17,6 @@ export default async function handler(req, res) {
       to: req.body.email,
       subject: `[VSAexchange] Staking order placed successfully`,
       html: `
-      coins exchange <coinsexchange2023@gmail.com>
-      11:53 AM (1 minute ago)
-      to me
-      
       <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
       <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
       <head>
