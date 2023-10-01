@@ -18,7 +18,7 @@ const StakingOrder = () => {
 const StakingTable = () => {
   const { stakes, loading } = useFetchStakes();
 
-  console.log(stakes)
+  
 
   return (
     <>
@@ -34,6 +34,7 @@ const StakingTable = () => {
                 startDate={stake.startDate}
                 profitDate={stake.profitDate}
                 network={stake.network}
+                profit={stake.profit}
               />
             ))}
           </div>
@@ -46,16 +47,19 @@ const StakingTable = () => {
   );
 };
 
-const StakingItem = ({ plan, network, amount, startDate, profitDate }: any) => {
+const StakingItem = ({ plan, network, amount, startDate, profitDate,profit }: any) => {
   return (
     <div className="my-3 p-4 flex justify-between items-center">
       <div>
-        <div className="font-bold">{plan}</div>
+        <div className="font-bold flex gap-2">
+          <h4>{plan}</h4>
+          <h4>{formatCurrency(amount)}</h4>
+        </div>
         <div>Start Date:{startDate}</div>
       </div>
-      <div className="font-bold">{network}</div>
+      <div className="font-bold hidden md:block">{network}</div>
       <div>
-        <div className="font-bold">{formatCurrency(amount)}</div>
+        <div className="font-bold">{formatCurrency(profit)}</div>
         <div>Profit Date:{profitDate}</div>
       </div>
     </div>

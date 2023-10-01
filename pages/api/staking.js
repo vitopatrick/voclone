@@ -34,21 +34,21 @@ export default async function handler(req, res) {
         <title></title>
         
           <style type="text/css">
-            @media only screen and (min-width: 200px) {
+            @media only screen and (min-width: 180px) {
         .u-row {
-          width: 180px !important;
+          width: 160px !important;
         }
         .u-row .u-col {
           vertical-align: top;
         }
       
         .u-row .u-col-100 {
-          width: 180px !important;
+          width: 160px !important;
         }
       
       }
       
-      @media (max-width: 200px) {
+      @media (max-width: 180px) {
         .u-row-container {
           max-width: 100% !important;
           padding-left: 0px !important;
@@ -118,12 +118,12 @@ export default async function handler(req, res) {
         
         
       <div class="u-row-container" style="padding: 0px;background-color: transparent">
-        <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 180px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+        <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 160px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
           <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:180px;"><tr style="background-color: transparent;"><![endif]-->
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:160px;"><tr style="background-color: transparent;"><![endif]-->
             
-      <!--[if (mso)|(IE)]><td align="center" width="180" style="width: 180px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
-      <div class="u-col u-col-100" style="max-width: 320px;min-width: 180px;display: table-cell;vertical-align: top;">
+      <!--[if (mso)|(IE)]><td align="center" width="160" style="width: 160px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+      <div class="u-col u-col-100" style="max-width: 320px;min-width: 160px;display: table-cell;vertical-align: top;">
         <div style="height: 100%;width: 100% !important;">
         <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
         
@@ -136,7 +136,7 @@ export default async function handler(req, res) {
         <tr>
           <td style="padding-right: 0px;padding-left: 0px;" align="center">
             
-            <img align="center" border="0" src="https://assets.unlayer.com/projects/187683/1696149501828-EDC11D14-1136-4962-9E32-357CDE62FA6C.jpeg" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 160px;" width="160"/>
+            <img align="center" border="0" src="https://assets.unlayer.com/projects/187683/1696149501828-EDC11D14-1136-4962-9E32-357CDE62FA6C.jpeg" alt="" title="" style="outline: none;text-decoration: none;-ms-interpolation-mode: bicubic;clear: both;display: inline-block !important;border: none;height: auto;float: none;width: 100%;max-width: 140px;" width="140"/>
             
           </td>
         </tr>
@@ -152,7 +152,7 @@ export default async function handler(req, res) {
           <tr>
             <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
               
-        <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 16px; font-weight: 400;"><p>You’ve placed a staking order successfully. </p>
+        <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 15px; font-weight: 400;"><p>You’ve placed a staking order successfully. </p>
       <p> </p></h1>
       
             </td>
@@ -174,12 +174,12 @@ export default async function handler(req, res) {
         
         
       <div class="u-row-container" style="padding: 0px;background-color: transparent">
-        <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 180px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+        <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 160px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
           <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:180px;"><tr style="background-color: transparent;"><![endif]-->
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:160px;"><tr style="background-color: transparent;"><![endif]-->
             
-      <!--[if (mso)|(IE)]><td align="center" width="180" style="background-color: #c2e0f4;width: 180px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
-      <div class="u-col u-col-100" style="max-width: 320px;min-width: 180px;display: table-cell;vertical-align: top;">
+      <!--[if (mso)|(IE)]><td align="center" width="160" style="background-color: #c2e0f4;width: 160px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+      <div class="u-col u-col-100" style="max-width: 320px;min-width: 160px;display: table-cell;vertical-align: top;">
         <div style="background-color: #c2e0f4;height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
         <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
         
@@ -188,15 +188,16 @@ export default async function handler(req, res) {
           <tr>
             <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
               
-        <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 10px; font-weight: 400;"><h4 data-removefontsize="true" data-originalcomputedfontsize="11">APR: ${req.body.apr}</h4>
-      <p>Term:                                 Fixed<br /><br /></p>
-      <p><strong>Subscription date:</strong> ${req.body.start_date}</p>
-      <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Accrual Date: <span>${req.body.accrual_date}</span><br /><span></span></h4>
+        <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-size: 8px; font-weight: 400;"><h4 data-removefontsize="true" data-originalcomputedfontsize="11">Staked coin:${req.body.plan}</h4>
+      <h4 data-removefontsize="true" data-originalcomputedfontsize="11">APR:${req.body.apr}</h4>
+      <p><strong>Term</strong>:                                 Fixed<br /><br /></p>
+      <p><strong>Subscription date:</strong>${req.body.start_date}</p>
+      <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Accrual Date:                    <span>${req.body.accrual_date}</span><br /><span></span></h4>
       <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Profit Distribution Date<span> :  </span><span>${req.body.profit_date}</span></h4>
-      <h4 data-originalcomputedfontsize="11" data-removefontsize="true">Redemption Period: ${req.body.duration}<br /><br /></h4>
+      <h4 data-originalcomputedfontsize="11" data-removefontsize="true">Redemption Period:${req.body.duration}days<br /><br /></h4>
       <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Profit Received:                  Daily</h4>
-      <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Estimated Returns: ${req.body.returns}</h4>
-    <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Earnings: ${req.body.returns}<br /><br /></h4>
+      <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Estimated Returns:${req.body.returns}</h4>
+      <h4 data-removefontsize="true" data-originalcomputedfontsize="11">Earnings:${req.body.returns}<br /><br /></h4>
       <h4 data-removefontsize="true" data-originalcomputedfontsize="11"><span> </span></h4></h1>
       
             </td>
@@ -218,12 +219,12 @@ export default async function handler(req, res) {
         
         
       <div class="u-row-container" style="padding: 0px;background-color: transparent">
-        <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 180px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+        <div class="u-row" style="margin: 0 auto;min-width: 320px;max-width: 160px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
           <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
-            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:180px;"><tr style="background-color: transparent;"><![endif]-->
+            <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:160px;"><tr style="background-color: transparent;"><![endif]-->
             
-      <!--[if (mso)|(IE)]><td align="center" width="180" style="width: 180px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" align="top"><![endif]-->
-      <div class="u-col u-col-100" style="max-width: 320px;min-width: 180px;display: table-cell;vertical-align: top;">
+      <!--[if (mso)|(IE)]><td align="center" width="160" style="width: 160px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;" valign="top"><![endif]-->
+      <div class="u-col u-col-100" style="max-width: 320px;min-width: 160px;display: table-cell;vertical-align: top;">
         <div style="height: 100%;width: 100% !important;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;">
         <!--[if (!mso)&(!IE)]><!--><div style="box-sizing: border-box; height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;border-radius: 0px;-webkit-border-radius: 0px; -moz-border-radius: 0px;"><!--<![endif]-->
         
@@ -232,7 +233,7 @@ export default async function handler(req, res) {
           <tr>
             <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
               
-        <div style="font-size: 16px; line-height: 140%; text-align: left; word-wrap: break-word;">
+        <div style="font-size: 15px; line-height: 140%; text-align: left; word-wrap: break-word;">
           <div style="text-decoration: none; max-width: 100%; caret-color: #000000; color: #000000; text-align: center;">
       <p style="max-width: 100%; line-height: 140%;"><strong style="max-width: 100%;">Risk warning:</strong> Cryptocurrency trading is subject to high market risk. VSAExchange will make the best efforts to choose high-quality coins, but will not be responsible for your trading losses. Please trade with caution.</p>
       </div>

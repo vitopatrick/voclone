@@ -105,6 +105,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         amount,
         start_date: new Date().toDateString(),
         profitDate: new Date(accrualDate).toDateString(),
+        profit:profit
       });
 
       // Add staking collection
@@ -115,6 +116,7 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         start_date: new Date().toDateString(),
         profitDate: new Date(accrualDate).toDateString(),
         email: user.email,
+        profit:profit
       });
 
       // update the user account 
@@ -135,7 +137,8 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
           profit_date:new Date(accrualDate).toDateString(),
           duration:data?.duration,
           returns:formatCurrency(profit),
-          apr:data?.roi
+          apr:data?.roi,
+          plan:data?.plan
         }),
       });
 

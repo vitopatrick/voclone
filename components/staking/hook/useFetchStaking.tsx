@@ -38,6 +38,7 @@ export const useFetchStakes = () => {
               startDate: data.start_date,
               profitDate: data.profitDate,
               network: data.network,
+              profit:data.profit
             });
             setStakes(stakesArray);
           });
