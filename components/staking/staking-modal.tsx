@@ -37,9 +37,21 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
   };
 
   let date = new Date();
-  // let accrualDate = date.setDate(date.getDate() + 10);
-  let accrualDate = date.setDate(date.getDate() + parseInt(data?.duration));
+  // function to change Accrual Date
+  const toChangeAccrualDate = (duration:String | number = 14 )=>{
+    switch (duration){
+      case '14':
+        return date.setDate(date.getDate() + 14)
+      case '30':
+        return date.setMonth(date.getMonth() + 1)
+      case "60":
+        return date.setMonth(date.getMonth()+ 2)
+    }
+  } 
   let profit = calculateProfit();
+  let accrualDate:undefined | Date | number |any = toChangeAccrualDate(data?.duration)
+
+
 
   const router = useRouter();
 
@@ -110,6 +122,21 @@ const StakingModal = ({ visible, setVisible, data }: ModalProps) => {
         MainAccount:increment(-amount),
         StakingAccount:increment(+amount)
       })
+
+      await fetch("/api/staking", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email: user.email,
+          start_date:new Date().toDateString(),
+          accrual_date:new Date(accrualDate).toDateString(),
+          profit_date:new Date(accrualDate).toDateString(),
+          duration:data?.duration,
+          returns:formatCurrency(profit),
+        }),
+      });
 
       router.reload();
     } catch (error) {
