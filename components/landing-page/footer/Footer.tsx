@@ -26,7 +26,7 @@ const Footer = () => {
             </h4>
             <div className="flex flex-col gap-3">
               <Link href="/tax" className="text-white font-regular">
-                Tax
+                Company Policy
               </Link>
               <Link href="/risk" className="text-white font-regular">
                 Risk & Warning
