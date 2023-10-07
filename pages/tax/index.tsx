@@ -4,7 +4,7 @@ import TaxBody from "../../components/tax/tax-body";
 
 const TaxPage = () => {
   return (
-    <div className="bg-bg text-white font-main h-screen">
+    <div className="bg-bg text-white font-main">
       <Navbar />
       <TaxBody />
       <Footer />

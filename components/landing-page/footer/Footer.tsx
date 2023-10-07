@@ -4,7 +4,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-bg">
-      <div className="w-[90%] mx-auto py-4">
+      <div className="w-[90%] mx-auto">
         <div className="font-bold text-teal-500/50 text-2xl uppercase underline tracking-widest">
           VSAexchange
         </div>
@@ -22,7 +22,7 @@ const Footer = () => {
           </div>
           <div className="flex flex-col justify-between gap-3">
             <h4 className="capitalize text-teal-500 font-bold">
-              Terms & Condition
+              Terms Of Use
             </h4>
             <div className="flex flex-col gap-3">
               <Link href="/tax" className="text-white font-regular">

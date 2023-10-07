@@ -7,6 +7,7 @@ import { auth } from "../../firebase";
 import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 
+
 const LoginForm = () => {
   const [isText, setIsText] = useState(false);
   const [email, setEmail] = useState("");
