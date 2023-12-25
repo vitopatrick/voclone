@@ -18,6 +18,8 @@ export function useCountry() {
         };
       });
 
+      countries.push({ country: "Tajikistan" });
+
       setCountries(countries);
       setDisable(false);
     } catch (error) {
