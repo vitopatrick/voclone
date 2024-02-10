@@ -1,7 +1,5 @@
 import {
-  addressFive,
   addressFour,
-  addressSix,
   addressThree,
   addressTwo,
   addresses,
@@ -16,9 +14,5 @@ export function getAddress(address_number: number | any) {
     return addressThree;
   } else if (address_number === 4) {
     return addressFour;
-  } else if (address_number === 5) {
-    return addressFive;
-  } else if (address_number === 6) {
-    return addressSix;
   }
 }
