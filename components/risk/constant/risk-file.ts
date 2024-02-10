@@ -1,17 +1,17 @@
 export const risks = [
   {
     heading: "A. How to interpret this Risk Warning",
-    body: `All terms used in this notice, which are defined in the VSAexchange Terms of Use (the
+    body: `All terms used in this notice, which are defined in the Volume Options Terms of Use (the
 “Terms of Use”), have the same meaning and construction as in the Terms of Use.`,
   },
   {
-    heading: "B. VSAexchange Services",
-    body: `This notice provides you with information about the risks associated with VSAexchange
-Services. Each VSAexchange Service has its own distinct risks. This notice provides a
-general description of the risks when you use VSAexchange Services.
+    heading: "B. Volume Options Services",
+    body: `This notice provides you with information about the risks associated with Volume Options
+Services. Each Volume Options Service has its own distinct risks. This notice provides a
+general description of the risks when you use Volume Options Services.
 This notice does not explain all of the risks or how such risks relate to your personal
 circumstances. It is important that you fully understand the risks involved before making a
-decision to use VSAexchange Services.
+decision to use Volume Options Services.
 `,
   },
   {
@@ -19,7 +19,7 @@ decision to use VSAexchange Services.
     body: `We do not provide personal advice in relation to our products or services. We sometimes
 provide factual information, information about transaction procedures and information about
 the potential risks. However, any decision to use our products or services is made by you.
-No communication or information provided to you by VSAexchange is intended as, or
+No communication or information provided to you by Volume Options is intended as, or
 shall be considered or construed as, investment advice, financial advice, trading advice, or
 any other sort of advice. You are solely responsible for determining whether any investment,
 investment strategy or related transaction is appropriate for you according to your personal
@@ -28,10 +28,10 @@ investment objectives, financial circumstances and risk tolerance.
   },
   {
     heading: "D. No Monitoring",
-    body: `VSAexchange is not your broker, intermediary, agent, or advisor and has no fiduciary
+    body: `Volume Options is not your broker, intermediary, agent, or advisor and has no fiduciary
 relationship or obligation to you in connection with any trades or other decisions or activities
-undertaken by you using VSAexchange Services. We do not monitor whether your use
-of VSAexchange Services is consistent with your financial goals and objectives. It is up
+undertaken by you using Volume Options Services. We do not monitor whether your use
+of Volume Options Services is consistent with your financial goals and objectives. It is up
 to you to assess whether your financial resources are adequate for your financial activity
 with us, and to your risk appetite in the products and services you use.
 `,
@@ -42,19 +42,19 @@ with us, and to your risk appetite in the products and services you use.
     body: `The taxation of Digital Assets is uncertain, and you are responsible for determining what
 taxes you might be liable to, and how they apply, when transacting through the Coin
 Exchange Services. It is your responsibility to report and pay any taxes that may arise from
-transacting on the VSAexchange Services, and you acknowledge that Coins
+transacting on the Volume Options Services, and you acknowledge that Coins
 Exchange does not provide legal or tax advice relative to these transactions. If you have
-any doubts about your tax status or obligations when using VSAexchange Services, or
-with respect to the Digital Assets held to the credit of your VSAexchange account, you
+any doubts about your tax status or obligations when using Volume Options Services, or
+with respect to the Digital Assets held to the credit of your Volume Options account, you
 may wish to seek independent advice.
 You acknowledge that, when, where and as required by applicable legislation, Coins
 Exchange shall report information regarding your transactions, transfers, distributions or
 payments to tax or other public authorities. Similarly, when, where and as required by
-applicable law, VSAexchange shall withhold taxes related to your transactions,
+applicable law, Volume Options shall withhold taxes related to your transactions,
 transfers, distributions or payments. Applicable legislation could also prompt Coins
 Exchange to request you for additional tax information, status, certificates or documentation.
 You acknowledge that failure to answer these requests within the time frame defined, may
-result in withholding taxes by VSAexchange , to be remitted to tax authorities as defined
+result in withholding taxes by Volume Options , to be remitted to tax authorities as defined
 by relevant law. You are encouraged to seek professional and personal tax advice regarding
 the above and before making any digital asset transaction.
 
@@ -75,7 +75,7 @@ of rapid price movements.`,
   },
   {
     heading: "H. Fees & Charges",
-    body: `Our fees and charges are set out here. VSAexchange may, in its discretion, update the
+    body: `Our fees and charges are set out here. Volume Options may, in its discretion, update the
 fees & charges from time to time. Please be aware of all costs and charges that apply to
 you, because such costs and charges will affect the gains you generate from using Coin
 Exchange Services.
@@ -83,23 +83,23 @@ Exchange Services.
   },
   {
     heading: "I. Availability Risk",
-    body: `We do not guarantee that the VSAexchange Services will be available at any particular
-time or that VSAexchange Services will not be subject to unplanned service outages or
+    body: `We do not guarantee that the Volume Options Services will be available at any particular
+time or that Volume Options Services will not be subject to unplanned service outages or
 network congestion. It may not be possible for you to buy, sell, store, transfer, send or
 receive Digital Assets when you wish to do so.`,
   },
   {
     heading: "J. Third Party Risk",
     body: `Third parties, such as payment providers, custodians, and banking partners may be involved
-in the provision of VSAexchange Services. You may be subject to the terms &
-conditions of these third parties, and VSAexchange may not be responsible for any loss
+in the provision of Volume Options Services. You may be subject to the terms &
+conditions of these third parties, and Volume Options may not be responsible for any loss
 that these third parties may cause to you.`,
   },
   {
     heading: "K. Security Risk",
-    body: `It is not possible for VSAexchange to eliminate all security risks. You are responsible for
-keeping your VSAexchange Account password safe, and you may be responsible for all
-the transactions under your VSAexchange Account, whether you authorized them or
+    body: `It is not possible for Volume Options to eliminate all security risks. You are responsible for
+keeping your Volume Options Account password safe, and you may be responsible for all
+the transactions under your Volume Options Account, whether you authorized them or
 not. Transactions in Digital Assets may be irreversible, and losses due to fraudulent or
 unauthorized transactions may not be recoverable.
 `,

@@ -22,11 +22,11 @@ const AboutWelcome = () => {
       <div className="w-[90%] mx-auto">
         <div className="py-12">
           <div className="text-3xl md:text-5xl py-3 font-bold ">
-            Welcome to VSAexchange
+            Welcome to Volume Options
           </div>
           <div className="text-neutral-300 capitalize">
-            At VSAexchange, we believe that everyone should have the freedom to
-            earn, hold, spend, share and give their money - no matter who you
+            At Volume Options, we believe that everyone should have the freedom
+            to earn, hold, spend, share and give their money - no matter who you
             are or where you come from.
           </div>
           <div className="flex gap-3 items-center justify-between mt-4 flex-col md:flex-row">
@@ -44,13 +44,14 @@ const AboutWelcome = () => {
           </div>
           <div className="content-center">
             <div className="text-xl md:text-3xl py-3 font-bold ">
-              Grow with VSAexchange
+              Grow with Volume Options
             </div>
             <div className="text-neutral-300 capitalize">
-              At VSAexchange, we give people the freedom to own their decisions,
-              collaborate openly, and serve our users with passion and
-              integrity. Join the VSAexchange team today and work with some of
-              the world’s most talented, hardworking, and passionate people.
+              At Volume Options, we give people the freedom to own their
+              decisions, collaborate openly, and serve our users with passion
+              and integrity. Join the Volume Options team today and work with
+              some of the world’s most talented, hardworking, and passionate
+              people.
             </div>
           </div>
         </div>

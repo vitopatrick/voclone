@@ -18,31 +18,31 @@ const faqs = [
     id: 3,
     question: "How long does it take to deposit",
     answer:
-      "Once there are enough confirmations on the blockchain, the VSAexchange system will start proceeding your deposit. This can take up to 2-3 hours.",
+      "Once there are enough confirmations on the blockchain, the Volume Options system will start proceeding your deposit. This can take up to 2-3 hours.",
   },
   {
     id: 4,
     question: "Can i deposit without verification",
     answer:
-      "Although you can technically use VSAexchange even without verifying your identity, a withdrawal limit will be imposed on you until you undergo the verification process",
+      "Although you can technically use Volume Options even without verifying your identity, a withdrawal limit will be imposed on you until you undergo the verification process",
   },
   {
     id: 5,
-    question: "Why is my VSAexchange deposit taking so long?",
+    question: "Why is my Volume Options deposit taking so long?",
     answer:
       "Sometimes, there can be delays in the time needed for our system to record your deposit. If you still haven't received your deposit after the allotted time frame, please contact our online support and provide the following info",
   },
   {
     id: 6,
-    question: "How long does Usdt deposit take on VSAexchange?",
+    question: "How long does Usdt deposit take on Volume Options?",
     answer:
       "Sometimes, there can be delays in the time needed for our system to record your deposit. If you still haven't received your deposit after the allotted time frame, please contact our online support and provide the following info",
   },
   {
     id: 7,
-    question: "How long does it take to receive BTC on VSAexchange?",
+    question: "How long does it take to receive BTC on Volume Options?",
     answer:
-      "VSAexchange tries to process all withdrawal requests within 30 minutes. However, withdrawals can take up to 2-3 hours to process when many transactions are taking place on a certain blockchain network.",
+      "Volume Options tries to process all withdrawal requests within 30 minutes. However, withdrawals can take up to 2-3 hours to process when many transactions are taking place on a certain blockchain network.",
   },
 ];
 

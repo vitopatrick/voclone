@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="bg-bg">
       <div className="w-[90%] mx-auto">
         <div className="font-bold text-teal-500/50 text-2xl uppercase underline tracking-widest">
-          VSAexchange
+          Volume Options
         </div>
         <div className="flex md:items-center gap-8 flex-col md:flex-row my-5">
           <div className="flex flex-col justify-between gap-3">
@@ -21,9 +21,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col justify-between gap-3">
-            <h4 className="capitalize text-teal-500 font-bold">
-              Terms Of Use
-            </h4>
+            <h4 className="capitalize text-teal-500 font-bold">Terms Of Use</h4>
             <div className="flex flex-col gap-3">
               <Link href="/tax" className="text-white font-regular">
                 Exchange Policy
@@ -35,10 +33,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="my-3 text-neutral-400 font-medium">
-          contact us: support@vsaexchange.com
+          contact us: support@Volume Options.com
         </div>
         <div className="text-neutral-400 font-regular">
-          VSAexchange©{new Date().getFullYear()}
+          Volume Options©{new Date().getFullYear()}
         </div>
       </div>
     </footer>

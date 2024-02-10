@@ -33,7 +33,7 @@ const StartToday = () => {
             </h4>
             <p className="capitalize font-regular leading-relaxed my-8 text-neutral-300">
               seize and maximize the opportunities and potentials of crypto
-              today by joining VSAexchange
+              today by joining Volume Options
             </p>
             <Link
               href="/auth/sign-up"

@@ -11,9 +11,9 @@ const faqs = [
 
   {
     id: 2,
-    question: "Is it safe to leave coins on coins exchange?",
+    question: "Is it safe to leave coins on Volume Options?",
     answer:
-      "Built to exacting standards, coins exchange bank-level encryption and data security provide a safe transaction environment. More than that, most of the crypto assets stored in coins exchange accounts are also stored in cold wallets",
+      "Built to exacting standards, Volume Options bank-level encryption and data security provide a safe transaction environment. More than that, most of the crypto assets stored in Volume Options accounts are also stored in cold wallets",
   },
 ];
 

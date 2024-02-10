@@ -15,7 +15,7 @@ const StakeToday = () => {
         <div className="md:grid grid-cols-2 gap-4">
           <div className="my-2 md:my-0 justify-items-center">
             <h4 className="text-xl md:text-4xl font-bold capitalize mb-2 text-teal-500">
-              Stake Crypto with VSAexchange
+              Stake Crypto with Volume Options
             </h4>
             <p className="capitalize font-regular leading-relaxed my-8 text-neutral-300">
               also seize and maximize the opportunities and potentials of crypto

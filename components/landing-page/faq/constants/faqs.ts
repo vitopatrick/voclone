@@ -1,9 +1,9 @@
 export const faqs = [
   {
     id: 1,
-    question: "What is VSAexchange",
+    question: "What is Volume Options",
     answer:
-      "VSAexchange is a crypto Exchange and defi institution,dedicated to helping new comers in crypto get started.",
+      "Volume Options is a crypto Exchange and defi institution,dedicated to helping new comers in crypto get started.",
   },
   {
     id: 2,
@@ -13,14 +13,14 @@ export const faqs = [
   },
   {
     id: 3,
-    question: "Does VSAexchange accept fiat",
+    question: "Does Volume Options accept fiat",
     answer:
-      "Yes VSAexchange accepts fiat currencies in exchange for the equivalent value.",
+      "Yes Volume Options accepts fiat currencies in exchange for the equivalent value.",
   },
   {
     id: 4,
-    question: "Is VSAexchange safe?",
+    question: "Is Volume Options safe?",
     answer:
-      "VSAexchange boasts one of the world's most sophisticated security technology and maintenance team, and is constantly upgrading our security systems to ensure the safety of user assets and accounts",
+      "Volume Options boasts one of the world's most sophisticated security technology and maintenance team, and is constantly upgrading our security systems to ensure the safety of user assets and accounts",
   },
 ];

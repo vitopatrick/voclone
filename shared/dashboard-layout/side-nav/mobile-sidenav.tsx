@@ -55,7 +55,7 @@ const MobileSideNav = ({ hide, setHide }: any) => {
             <div>
               {/* logo flex container */}
               <div className="mb-8  font-bold text-button uppercase tracking-widest underline text-xl">
-                VSAexchange
+                Volume Options
               </div>
               <div className="space-y-4">
                 {FIRST_LINKS.map((link) => (

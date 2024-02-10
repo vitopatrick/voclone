@@ -7,7 +7,7 @@ const StartRow = () => {
         Start Your Crypto Journey Now!
       </div>
       <div className="font-regular text-md text-neutral-400 my-4 capitalize text-center px-3">
-        With the VSAexchange website, trading has never been easier.
+        With the Volume Options website, trading has never been easier.
       </div>
       <Link
         href="/auth/sign-up"

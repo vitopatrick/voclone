@@ -6,7 +6,7 @@ const Endless = () => {
     <section className="md:p-10">
       <div className="w-[90%] mx-auto">
         <div className="font-bold text-xl text-white md:text-4xl mb-6">
-          Explore Endless Opportunities with VSAexchange
+          Explore Endless Opportunities with Volume Options
         </div>
         <div className="flex flex-col md:flex-row gap-4">
           {ctas.map((cta: any, index) => (

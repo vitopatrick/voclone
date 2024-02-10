@@ -5,21 +5,21 @@ import { AnimatePresence, motion } from "framer-motion";
 const faqs = [
   {
     id: 1,
-    question: "How long do I have to wait to withdraw from VSAexchange?",
+    question: "How long do I have to wait to withdraw from Volume Options?",
     answer:
-      "VSAexchange withdrawals typically take around 30 minutes.That's because it usually takes that long for VSAexchange to process each transaction. However, if you withdraw large amounts, processing time may take longer.",
+      "Volume Options withdrawals typically take around 30 minutes.That's because it usually takes that long for Volume Options to process each transaction. However, if you withdraw large amounts, processing time may take longer.",
   },
   {
     id: 2,
-    question: "Does VSAexchange let you withdraw to bank?",
+    question: "Does Volume Options let you withdraw to bank?",
     answer:
-      "How To Withdraw From VSAexchange To Bank? Unfortunately,you cannot withdraw fiat directly from VSAexchange. You will be able to withdraw your money,though,if you open an account on a different exchange that permits fiat withdrawals.",
+      "How To Withdraw From Volume Options To Bank? Unfortunately,you cannot withdraw fiat directly from Volume Options. You will be able to withdraw your money,though,if you open an account on a different exchange that permits fiat withdrawals.",
   },
   {
     id: 3,
-    question: "Can I withdraw from VSAexchange without verification?",
+    question: "Can I withdraw from Volume Options without verification?",
     answer:
-      "VSAexchange is a cryptocurrency exchange that requires users to complete a verification process in order to use certain features of the platform, such as making deposits and withdrawals.",
+      "Volume Options is a cryptocurrency exchange that requires users to complete a verification process in order to use certain features of the platform, such as making deposits and withdrawals.",
   },
 ];
 
