@@ -185,11 +185,11 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 <tr>
 <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
 <div style="font-size: 14px; line-height: 140%; text-align: left; word-wrap: break-word;">
-<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Staked coin:${req.body.coin}</h4>
+<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Staked coin:${req.body.plan}</h4>
 <h4 data-removefontsize="true" data-originalcomputedfontsize="16">Amount ($): ${req.body.amount}</h4>
 <h4 data-removefontsize="true" data-originalcomputedfontsize="16">APR: ${req.body.apr}</h4>
 <p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Term</strong>: ${req.body.term}<br /><br /></p>
-<p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Subscription date: ${req.body.date}</strong></p>
+<p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Subscription date: ${req.body.start_date}</strong></p>
 <h4 data-removefontsize="true" data-originalcomputedfontsize="16">Redemption Period: ${req.body.duration}<br /><br /></h4>
 </div>
 
