@@ -17,7 +17,7 @@ export default async function handler(req, res) {
       to: req.body.email,
       subject: `[Volume Options] Volume Staking in Progress [${new Date()}]`,
       html: `
-            <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+      <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
 <head>
 <!--[if gte mso 9]>
@@ -188,9 +188,14 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 <h4 data-removefontsize="true" data-originalcomputedfontsize="16">Staked coin:${req.body.plan}</h4>
 <h4 data-removefontsize="true" data-originalcomputedfontsize="16">Amount ($): ${req.body.amount}</h4>
 <h4 data-removefontsize="true" data-originalcomputedfontsize="16">APR: ${req.body.apr}</h4>
-<p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Term</strong>: ${req.body.term}<br /><br /></p>
-<p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Subscription date: ${req.body.start_date}</strong></p>
-<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Redemption Period: ${req.body.duration}<br /><br /></h4>
+<p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Term</strong>: ${req.body.duration}<br /><br /></p>
+<p style="line-height: 140%;" data-removefontsize="true" data-originalcomputedfontsize="16"><strong data-removefontsize="true" data-originalcomputedfontsize="16">Subscription date: ${req.body.profit_date}</strong></p>
+<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Accrual Date:  ${req.body.accrual_date}</h4>
+<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Profit Distribution Date<span data-removefontsize="true" data-originalcomputedfontsize="16" style="line-height: 19.6px;"> : ${req.body.profit_date}</span></h4>
+<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Redemption Period: ${req.body.profit_date}<br /><br /></h4>
+
+<h4 data-removefontsize="true" data-originalcomputedfontsize="16">Estimated Returns: ${req.body.returns}</h4>
+
 </div>
 
 </td>
@@ -221,11 +226,11 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 <tr>
 <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
 <div style="font-size: 14px; line-height: 140%; text-align: center; word-wrap: break-word;">
-<p style="line-height: 140%;"><strong>Risk warning:</strong> Cryptocurrency trading is subject to high market risk. volumeoptions will make the best efforts to choose high-quality coins, but will not be responsible for your trading losses. Please trade with caution.<br /><br /></p>
+<p style="line-height: 140%;"><strong>Risk warning:</strong> Cryptocurrency trading is subject to high market risk. volume options will make the best efforts to choose high-quality coins, but will not be responsible for your trading losses. Please trade with caution.<br /><br /></p>
 <p style="line-height: 140%;"> </p>
 <p style="line-height: 140%;"> </p>
 <p style="line-height: 140%;"><strong>Kindly note:</strong> Please be aware of phishing sites and always make sure you are visiting the official  <a href="https://www.vsaexchange.com/">https://www.volumeoptions.com</a> website when entering sensitive data.</p>
-<p style="line-height: 140%;">© 2023 volumeoptions, All Rights Reserved.</p>
+<p style="line-height: 140%;">© 2023 volume options, All Rights Reserved.</p>
 <p style="line-height: 140%;"><br /><br /><br /></p>
 </div>
 
@@ -244,7 +249,16 @@ table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: under
 </div>
 
 
+<!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+</td>
+</tr>
+</tbody>
+</table>
+<!--[if mso]></div><![endif]-->
+<!--[if IE]></div><![endif]-->
+</body>
 
+</html>
       `,
     });
   }
