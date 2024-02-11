@@ -6,12 +6,18 @@ const TaxBody = () => {
       <div className="w-[90%] mx-auto">
         {/* Download the summary */}
         <div className="py-6">
-          <a href="/files/terms-and-condition.pdf" className="bg-teal-400 capitalize p-4 rounded-lg" download={true}>
+          <a
+            href="/files/terms-and-condition.pdf"
+            className="bg-teal-400 capitalize p-4 rounded-lg"
+            download={true}
+          >
             Download for personal Use
           </a>
         </div>
         <div className="space-y-8 py-3">
-          <h3 className="font-bold text-teal-400">VSA Exchange TERMS OF USE</h3>
+          <h3 className="font-bold text-teal-400">
+            Volume Options TERMS OF USE
+          </h3>
           <div>
             <h4 className="font-bold text-neutral-400">
               Last Updated: <span className="text-white">16 August 2023</span>
@@ -25,27 +31,27 @@ const TaxBody = () => {
           <div>
             <p>
               These Terms constitute a legally binding agreement between you
-              (“you” or “your”) and VSA Exchange (“VSA Exchange”, “we”, “our” or
-              “us”). The Terms govern your use of the VSA Exchange Services made
-              available to you on or through the Platform or otherwise. VSA
-              Exchange Services may be provided by VSA Exchange or, if specified
-              in these Terms, any Product Terms or any additional terms, by any
-              VSA Exchange Affiliate.
+              (“you” or “your”) and Volume Options (“Volume Options”, “we”,
+              “our” or “us”). The Terms govern your use of the Volume Options
+              Services made available to you on or through the Platform or
+              otherwise. VSA Exchange Services may be provided by Volume Options
+              or, if specified in these Terms, any Product Terms or any
+              additional terms, by any Volume Options Affiliate.
             </p>
 
             <p>
-              By registering for a VSA Exchange Account, accessing the Platform
-              and/or using the VSA Exchange Services, you agree that you have
-              read, understood and accepted these Terms, together with any
-              additional documents or terms referred to in these Terms. You
+              By registering for a Volume Options Account, accessing the
+              Platform and/or using the Volume Options Services, you agree that
+              you have read, understood and accepted these Terms, together with
+              any additional documents or terms referred to in these Terms. You
               acknowledge and agree that you will be bound by and will comply
               with these Terms, as updated and amended from time to time.
             </p>
 
             <p>
               If you do not understand and accept these Terms in their entirety,
-              you should not register for a VSA Exchange Account or access or
-              use the Platform or any VSA Exchange Service.
+              you should not register for a Volume Options Account or access or
+              use the Platform or any Volume Options Service.
             </p>
           </div>
           <hr />
@@ -68,7 +74,7 @@ const TaxBody = () => {
             </p>
             <p>
               It is important that you fully understand the risks involved
-              before making a decision to use the VSA Exchange Services.
+              before making a decision to use the Volume Options Services.
             </p>
           </div>
           <hr />
@@ -77,10 +83,10 @@ const TaxBody = () => {
               We are not your broker, intermediary, agent or advisor and we have
               no fiduciary relationship or obligation to you in connection with
               any Transactions or other activities you undertake when using the
-              VSA Exchange Services. We do not provide investment or consulting
-              advice of any kind and no communication or information that we
-              provide to you is intended as, or should be construed as, advice
-              of any kind.
+              Volume Options Services. We do not provide investment or
+              consulting advice of any kind and no communication or information
+              that we provide to you is intended as, or should be construed as,
+              advice of any kind.
             </p>
 
             <p>
@@ -106,7 +112,7 @@ const TaxBody = () => {
             <h4 className="font-bold">1. Introduction</h4>
 
             <p className="leading-loose">
-              1.1. About us. The VSA Exchange group is an ecosystem centred
+              1.1. About us. The Volume Options group is an ecosystem centred
               around an online exchange for Digital Assets trading. The VSA
               Exchange group provides users with a trading platform to buy and
               sell Digital Assets, integrated custody solution allowing users to
@@ -115,10 +121,10 @@ const TaxBody = () => {
             </p>
 
             <p className="leading-loose">
-              1.2. These Terms. By registering to open a VSA Exchange Account
+              1.2. These Terms. By registering to open a Volume Options Account
               you are entering into a legally binding agreement with us. These
-              Terms will govern your use of the VSA Exchange Services and tell
-              you who we are, how we will provide the VSA Exchange Services to
+              Terms will govern your use of the Volume Options Services and tell
+              you who we are, how we will provide the Volume Options Services to
               you, how these Terms may be changed or terminated, what to do if
               there is a problem, along with other important information.
             </p>
@@ -143,10 +149,10 @@ const TaxBody = () => {
               the risks that can arise when buying, selling, holding or
               investing in Digital Assets. c. The Fee Structure page on our
               Website. d. Product Terms, which set out additional terms and
-              conditions that will apply to your use of specific VSA Exchange
+              conditions that will apply to your use of specific Volume Options
               Services. You acknowledge that you will be bound by, and agree
               that you will comply with, any relevant additional terms and
-              conditions that apply to your use of the VSA Exchange Services.
+              conditions that apply to your use of the Volume Options Services.
             </div>
           </div>
           <hr />
@@ -156,7 +162,7 @@ const TaxBody = () => {
             <div className="leading-loose">
               a. be an individual, corporation, legal person, entity or other
               organisation with the full power, authority and capacity to (1)
-              access and use the VSA Exchange Services; and (2) enter into and
+              access and use the Volume Options Services; and (2) enter into and
               comply with your obligations under these Terms; b. if you are an
               individual, be at least 18 years old; c. if you act as an employee
               or agent of a legal entity, and enter into these Terms on their
@@ -164,11 +170,11 @@ const TaxBody = () => {
               such legal entity for the purposes of entering into these Terms;
               d. not have been previously suspended or removed from using VSA
               Exchange Services; e. not be a Restricted Person; f. not currently
-              have an existing VSA Exchange Account; and g. not be located,
+              have an existing Volume Options Account; and g. not be located,
               incorporated, otherwise established in, a citizen of, or resident
               of, or have business operations in: i. a jurisdiction where it
               would be illegal under Applicable Law for you to access or use the
-              VSA Exchange Services, or cause us or any third party to
+              Volume Options Services, or cause us or any third party to
               contravene any Applicable Law; or ii. a country listed in our List
               of Prohibited Countries. 2.2. Amending our eligibility criteria.
               We may amend our eligibility criteria at any time in our sole
@@ -185,31 +191,31 @@ const TaxBody = () => {
           <div>
             <h4 className="font-bold"> 3. How we contact each other</h4>
             <div className="leading-loose">
-              3.1. How you can contact us. For more information on VSA Exchange,
-              you may refer to the information found on our Website. If you have
-              questions, feedback or complaints you can contact us via our
-              Customer Support team at https://www.VSA Exchange.com/en/chat.
-              These Terms may specify contact details for particular notices.
-              This address is not monitored for those notices. 3.2. How we will
-              contact you. We will contact you using the details you provide to
-              us. This may include contacting you by email, SMS or telephone. It
-              is important that you ensure that your contact details are correct
-              and up to date. If your contact details change, you must let us
-              know immediately. If you do not, we will not be responsible if you
-              do not receive information, notices or other important information
-              from us.
+              3.1. How you can contact us. For more information on Volume
+              Options, you may refer to the information found on our Website. If
+              you have questions, feedback or complaints you can contact us via
+              our Customer Support team at https://www.Volume
+              Options.com/en/chat. These Terms may specify contact details for
+              particular notices. This address is not monitored for those
+              notices. 3.2. How we will contact you. We will contact you using
+              the details you provide to us. This may include contacting you by
+              email, SMS or telephone. It is important that you ensure that your
+              contact details are correct and up to date. If your contact
+              details change, you must let us know immediately. If you do not,
+              we will not be responsible if you do not receive information,
+              notices or other important information from us.
             </div>
           </div>
           <hr />
           <div>
-            <h4 className="font-bold">4. VSA Exchange Services</h4>
+            <h4 className="font-bold">4. Volume Options Services</h4>
             <div className="leading-loose">
-              4.1. Specific product terms. Once you have opened a VSA Exchange
-              Account, you will be able to use the VSA Exchange Services in
+              4.1. Specific product terms. Once you have opened a Volume Options
+              Account, you will be able to use the Volume Options Services in
               accordance with these Terms and the Product Terms that govern your
-              use of each specific VSA Exchange Service.
+              use of each specific Volume Options Service.
               <div>
-                4.2. Multiple accounts: VSA Exchange does not allow the use of
+                4.2. Multiple accounts: Volume Options does not allow the use of
                 multiple accounts or signing up with the same IP address for
                 different accounts. If we detect that you have multiple
                 accounts, your account will be suspended and placed under risk
@@ -225,7 +231,7 @@ const TaxBody = () => {
               <div>
                 5.1. Availability of Chat Service. We may make our interactive
                 online chat service available to you (“Chat Service”) at any
-                time in connection with your use of any of the VSA Exchange
+                time in connection with your use of any of the Volume Options
                 Services. By using the Chat Service, you may interact with a
                 bot, chatbot, or other non-human. We will disclose the use of a
                 chatbot, or other non-human, to the extent required by
@@ -239,9 +245,9 @@ const TaxBody = () => {
                 to provide you with accurate and current information based on
                 your question or need. Nothing we communicate in the Chat
                 Service will be considered a legal agreement, representation or
-                warranty as to the VSA Exchange Services, processes, decisions,
-                or response times. Any personal data shared with us when using
-                the Chat Service will be subject to the applicable
+                warranty as to the Volume Options Services, processes,
+                decisions, or response times. Any personal data shared with us
+                when using the Chat Service will be subject to the applicable
                 privacy-related policies and notices described in our Privacy
                 Notice.
               </div>
@@ -258,7 +264,7 @@ const TaxBody = () => {
                 or to spread false or misleading information or messages that
                 are otherwise in contravention of Applicable Laws, and doing so
                 may result in termination of the Chat Service session and may
-                lead to restrictions on the availability of VSA Exchange
+                lead to restrictions on the availability of Volume Options
                 Services to you.
               </div>
             </div>
@@ -268,8 +274,8 @@ const TaxBody = () => {
             <div className="leading-loose">
               <div>
                 6.1. Payment of fees. You agree to pay all applicable fees in
-                connection with your use of the VSA Exchange Services as set out
-                on the Fee Structure page on our Website, or otherwise
+                connection with your use of the Volume Options Services as set
+                out on the Fee Structure page on our Website, or otherwise
                 communicated to you in any relevant Product Terms.
               </div>
               <div>
@@ -285,7 +291,7 @@ const TaxBody = () => {
                 (or the Fiat Currency equivalent), at the rate currently offered
                 on the Platform or at such other commercially reasonable rate as
                 we may determine). In the event that there are insufficient
-                Digital Assets in your VSA Exchange Account, you acknowledge
+                Digital Assets in your Volume Options Account, you acknowledge
                 that any amount due and payable from you under this clause is a
                 debt immediately due and owing by you to us in such amount and
                 form (whether in the form of a Digital Asset or otherwise) as we
@@ -300,34 +306,34 @@ const TaxBody = () => {
           </div>
           <div>
             <h4 className="font-bold">
-              INFORMATION ABOUT YOUR VSA Exchange ACCOUNT
+              INFORMATION ABOUT YOUR Volume Options ACCOUNT
             </h4>
-            <h4 className="font-bold">7. Creating a VSA Exchange Account</h4>
+            <h4 className="font-bold">7. Creating a Volume Options Account</h4>
             <div className="leading-loose">
               <div>
                 7.1. Account opening. You must create and maintain a VSA
-                Exchange Account in order to access the VSA Exchange Services
-                and the Platform. This may be a VSA Exchange Account for an
-                individual user, or a Corporate VSA Exchange Account where the
+                Exchange Account in order to access the Volume Options Services
+                and the Platform. This may be a Volume Options Account for an
+                individual user, or a Corporate Volume Options Account where the
                 user is a corporation, entity or other organisation. All VSA
                 Exchange Accounts are provided at our absolute discretion. We
-                reserve the right to refuse any application for a VSA Exchange
-                Account without reason or to limit the number of VSA Exchange
+                reserve the right to refuse any application for a Volume Options
+                Account without reason or to limit the number of Volume Options
                 Accounts that you may hold.
               </div>
               <div>
-                7.2. Sole benefit. By opening a VSA Exchange Account you agree
+                7.2. Sole benefit. By opening a Volume Options Account you agree
                 that: a. where you are an individual user, you will use your VSA
                 Exchange Account only for yourself, and not on behalf of any
                 third party, unless you have obtained our prior written consent;
                 and b. where you are a corporate user, your Permitted Users will
-                use the Corporate VSA Exchange Account only for your benefit,
+                use the Corporate Volume Options Account only for your benefit,
                 and not on behalf of any third party, unless our prior written
                 consent has been obtained. You are fully responsible for all
-                activity that occurs under your VSA Exchange Account. 7.3.
+                activity that occurs under your Volume Options Account. 7.3.
                 Identity verification. You will need to comply with our identity
                 verification procedures before you are permitted to open a VSA
-                Exchange Account and access and use the VSA Exchange Services,
+                Exchange Account and access and use the Volume Options Services,
                 by providing us with certain information about yourself and,
                 where relevant, your Permitted Users. All information that you
                 provide must be complete, accurate and truthful. You must update
@@ -348,22 +354,22 @@ const TaxBody = () => {
                 our enhanced due diligence procedures by submitting additional
                 information about yourself, your business or your Permitted
                 Users, providing additional records or documentation, or having
-                face to face meetings with representatives of VSA Exchange. 7.5.
-                Records. We keep your personal data to enable your continued use
-                of VSA Exchange Services, for as long as it is required in order
-                to fulfil the relevant purposes described in this Privacy
-                Notice, and as may be required by law such as for tax and
-                accounting purposes, compliance with anti-money laundering laws,
-                or as otherwise communicated to you. Please review our Privacy
-                Notice for more information on how we collect and use your
-                personal data relating to the use and performance of our Sites
-                and the VSA Exchange Services. 7.6. Sub-Accounts. At our
-                discretion, you may create and access a VSA Exchange
-                Sub-Account. Each natural person associated with a VSA Exchange
-                Sub-Account is subject to the identity verification requirements
-                set out in this clause ‎7. Only one natural person or corporate
-                entity may be associated with a particular VSA Exchange
-                Sub-Account.
+                face to face meetings with representatives of Volume Options.
+                7.5. Records. We keep your personal data to enable your
+                continued use of Volume Options Services, for as long as it is
+                required in order to fulfil the relevant purposes described in
+                this Privacy Notice, and as may be required by law such as for
+                tax and accounting purposes, compliance with anti-money
+                laundering laws, or as otherwise communicated to you. Please
+                review our Privacy Notice for more information on how we collect
+                and use your personal data relating to the use and performance
+                of our Sites and the Volume Options Services. 7.6. Sub-Accounts.
+                At our discretion, you may create and access a Volume Options
+                Sub-Account. Each natural person associated with a Volume
+                Options Sub-Account is subject to the identity verification
+                requirements set out in this clause ‎7. Only one natural person
+                or corporate entity may be associated with a particular Volume
+                Options Sub-Account.
               </div>
             </div>
             <div>
@@ -377,21 +383,22 @@ const TaxBody = () => {
                   terrorist financing, fraud, or any other financial crime, or
                   for any other valid reason. You agree to provide us with any
                   such information we request and permit us to keep a record of
-                  the information for the lifetime of your VSA Exchange Account
-                  as long as it is required to fulfil their intended purposes,
-                  or such other period as prescribed by Applicable Law.
+                  the information for the lifetime of your Volume Options
+                  Account as long as it is required to fulfil their intended
+                  purposes, or such other period as prescribed by Applicable
+                  Law.
                 </div>
                 <div>
                   8.2. What happens when you provide information. Your access to
-                  your VSA Exchange Account and the Transaction limits that
-                  apply to your use of the VSA Exchange Services may be altered
-                  as a result of information collected about you on an ongoing
-                  basis. If there is a reasonable suspicion that any information
-                  provided by you is wrong, untruthful, outdated, or incomplete,
-                  we may send you a notice to request corrections, remove
-                  relevant information, or do such other things that we consider
-                  necessary to ensure that the information provided by you is
-                  true and correct.
+                  your Volume Options Account and the Transaction limits that
+                  apply to your use of the Volume Options Services may be
+                  altered as a result of information collected about you on an
+                  ongoing basis. If there is a reasonable suspicion that any
+                  information provided by you is wrong, untruthful, outdated, or
+                  incomplete, we may send you a notice to request corrections,
+                  remove relevant information, or do such other things that we
+                  consider necessary to ensure that the information provided by
+                  you is true and correct.
                 </div>
 
                 <div>
@@ -399,28 +406,28 @@ const TaxBody = () => {
                   must comply with any information request we send to you. If
                   you decline to provide the requested information, or otherwise
                   do not comply in a timely manner, we reserve the right to
-                  suspend or terminate your access to your VSA Exchange Account,
-                  or to all or part of the VSA Exchange Services immediately,
-                  without notice.
+                  suspend or terminate your access to your Volume Options
+                  Account, or to all or part of the Volume Options Services
+                  immediately, without notice.
                 </div>
               </div>
             </div>
             <div>
               <div className="leading-loose">
                 <h4 className="font-bold">
-                  9. Accessing your VSA Exchange Account
+                  9. Accessing your Volume Options Account
                 </h4>
                 <div>
-                  9.1. Access. To access your VSA Exchange Account you or, where
-                  relevant, your Permitted Users, must have the necessary
+                  9.1. Access. To access your Volume Options Account you or,
+                  where relevant, your Permitted Users, must have the necessary
                   equipment (such as a computer or smartphone) and access to the
-                  internet. Your VSA Exchange Account can be accessed directly
+                  internet. Your Volume Options Account can be accessed directly
                   using the Platform or by such other mode of access (including
                   APIs) as we may prescribe. You are only permitted to access
-                  your VSA Exchange Account by using the Access IDs we provide
+                  your Volume Options Account by using the Access IDs we provide
                   to you or your Permitted Users for such purposes. We may
-                  require multi-factor authentication to keep your VSA Exchange
-                  Account safe and secure.
+                  require multi-factor authentication to keep your Volume
+                  Options Account safe and secure.
                 </div>
                 <div>
                   The use of the Platform and other access methods may be
@@ -429,9 +436,9 @@ const TaxBody = () => {
 
                 <div>
                   9.2. Restricting access to third parties. You must ensure that
-                  any VSA Exchange Account(s) registered under your name will
+                  any Volume Options Account(s) registered under your name will
                   not be used by any person other than yourself or, with respect
-                  to Corporate VSA Exchange Accounts, your Permitted Users,
+                  to Corporate Volume Options Accounts, your Permitted Users,
                   other than in accordance with these Terms.
                 </div>
               </div>
@@ -456,9 +463,9 @@ const TaxBody = () => {
 
                 <div>
                   9.2. Restricting access to third parties. You must ensure that
-                  any VSA Exchange Account(s) registered under your name will
+                  any Volume Options Account(s) registered under your name will
                   not be used by any person other than yourself or, with respect
-                  to Corporate VSA Exchange Accounts, your Permitted Users,
+                  to Corporate Volume Options Accounts, your Permitted Users,
                   other than in accordance with these Terms.
                 </div>
               </div>

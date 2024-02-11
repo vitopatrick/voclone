@@ -12,9 +12,9 @@ const CryptoMiningBody = (props: Props) => {
         Crypto Mining Agreement (hereinafter the “Agreement”) and fully
         understand the Agreement and its terms. If users have any reservations
         about the content of this Agreement, they should not proceed to the next
-        step. When the user makes use of VSA Exchange platform
-        (“our/platform/VSA Exchange”) services, provide a confirmation through a
-        webpage, or accept this Agreement in any other way, it will be deemed
+        step. When the user makes use of Volume Options platform
+        (“our/platform/Volume Options”) services, provide a confirmation through
+        a webpage, or accept this Agreement in any other way, it will be deemed
         that they have fully understood all the terms of this Agreement and
         agreed to enter into it with us. Note: If a user has any concerns or
         reservations with regard to the content of this Agreement, they may
